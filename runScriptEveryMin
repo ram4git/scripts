@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "Downloading script"
+cd /usr/local/bin
+wget https://github.com/ram4git/scripts/blob/master/emailOnCpuOverLimit
+chmod 777 emailOnCpuOverLimit
+
+echo "Setting up cron job"
+* * * * * /bin/bash ./emailOnCpuOverLimit
