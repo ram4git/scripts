@@ -1,5 +1,13 @@
 #!/bin/bash
 
+
+# mail has to be installed already
+# ubuntu
+# apt-get install mailutils
+# centos
+# yum install mailutils
+#
+
 export USER=mongodb
 export THRESHOLD=80
 export EMAIL=sivaravan@gmail.com
