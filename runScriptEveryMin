@@ -6,4 +6,6 @@ wget https://raw.githubusercontent.com/ram4git/scripts/master/emailOnCpuOverLimi
 chmod 777 emailOnCpuOverLimit
 
 echo "Setting up cron job"
-* * * * * /bin/bash ./emailOnCpuOverLimit
+(crontab -l ; echo "* * * * * ./emailOnCpuOverLimit") | sort - | uniq - | crontab -
+
+echo "Done"
