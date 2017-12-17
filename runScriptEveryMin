@@ -2,7 +2,7 @@
 
 echo "Downloading script"
 cd /usr/local/bin
-wget https://github.com/ram4git/scripts/blob/master/emailOnCpuOverLimit
+wget https://raw.githubusercontent.com/ram4git/scripts/master/emailOnCpuOverLimit
 chmod 777 emailOnCpuOverLimit
 
 echo "Setting up cron job"
