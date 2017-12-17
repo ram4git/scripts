@@ -33,7 +33,5 @@ export USER_CPU=`getCpuPerUser | grep -i $USER | awk {'print $2'}`
 if [ $(expr $USER_CPU ">=" $THRESHOLD) -ne 0 ]
 then
         echo "CPU IS LESS THAN $THRESHOLD"
-        mail -s "$USER CPU USAGE IS MORE THAN $THRESHOLD" $EMAIL << EOF
-        "CURRENT CPU VALUE FOR $USER = $USER_CPU"
-        EOF
+        mail -s "$USER CPU USAGE IS MORE THAN $THRESHOLD" $EMAIL << "CURRENT CPU VALUE FOR $USER = $USER_CPU"
 fi
